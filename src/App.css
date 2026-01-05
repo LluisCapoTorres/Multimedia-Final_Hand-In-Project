@@ -1,0 +1,328 @@
+/* Ensure the html and body take up the full height and width */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
+
+/* Global CSS variables */
+:root {
+  --primary-color: #007f91;
+  --secondary-color: #f4e4bc;
+  --text-dark: #333;
+  --white: #ffffff;
+}
+
+/* Base App container */
+.App {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header section: full width and centered content */
+.hero-header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 4rem 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Main content wrapper */
+main {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Multimedia section layout */
+.multimedia-section {
+  width: 100%;
+  margin-bottom: 40px;
+  margin-left: -2.9%;
+}
+
+/* Video styling */
+.media-container video {
+  width: 100%;
+  max-height: 600px;
+  border-radius: 8px;
+}
+
+/* Flexible grid for media items */
+.media-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.media-item {
+  background: var(--white);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+}
+
+/* Activities section layout using CSS Grid */
+.activity-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+  width: 100%;
+}
+
+.activity-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Ensure images inside activity cards scale correctly */
+.activity-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Cart wrapper */
+.cart-wrapper {
+  width: 100%;
+}
+
+/* Base cart container styling */
+.cart-container {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+  position: sticky;
+  top: 20px;
+}
+
+/* Responsive adjustments for tablets and mobile devices */
+@media (max-width: 900px) {
+  .activity-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Footer styling */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  background-color: #333;
+  color: white;
+  box-sizing: border-box;
+}
+
+/* Layout proportion adjustments */
+.activity-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 30px;
+  width: 100%;
+  align-items: start;
+}
+
+/* Main cart container with enhanced visual style */
+.cart-container {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 20px;
+}
+
+/* Cart title styling */
+.cart-title {
+  color: #00d2ff;
+  margin-top: 0;
+  border-bottom: 1px solid #444;
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* Individual cart item rows */
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2d2d2d;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 4px solid #00d2ff;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.item-price {
+  color: #00d2ff;
+  font-size: 0.9rem;
+}
+
+/* Enhanced "Remove" button styling */
+.remove-btn-modern {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: background 0.3s ease;
+  min-width: 80px;
+}
+
+.remove-btn-modern:hover {
+  background-color: #ff1a1a;
+}
+
+/* Cart footer displaying the total amount */
+.cart-footer {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.total-price {
+  color: #00d2ff;
+  font-size: 1.5rem;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 950px) {
+  .activity-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Multimedia section container */
+.multimedia-section {
+  padding: 40px;
+  background-color: #f0f4f8;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+/* Multimedia section title */
+.section-title {
+  color: #004d57;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+/* Video container styling */
+.video-container {
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-container h3 {
+  color: #333;
+  margin-top: 0;
+}
+
+.promo-video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Grid layout for image and audio blocks */
+.secondary-media-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Image block styling */
+.image-block {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.image-block h3,
+.media-caption {
+  color: #333;
+}
+
+.image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.edited-photo {
+  width: 80%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Audio block styling */
+.audio-block {
+  background: #004d57;
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  height: auto;
+}
+
+.audio-block h3 {
+  margin-top: 0;
+  color: #00d2ff;
+}
+
+.audio-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+/* Custom audio player */
+.custom-audio {
+  width: 100%;
+}
